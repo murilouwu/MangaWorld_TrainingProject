@@ -326,6 +326,95 @@ body{
 	.cor2-Block4{
 		width: 100%;
 	}
+.Block-Five{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 60vh;
+	padding: 5vh 0vw;
+	background-color: var(--corA);
+}
+	.centerBlock5{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 80vw;
+		height: 56vh;
+	}
+		.TextBlock5{
+			display: flex;
+			flex-direction: column;
+			align-items: self-start;
+			justify-content: start;
+			color: var(--corE);
+			font-size: 2vh;
+			font-family: monospace;
+			font-style: italic;
+			width: 40%;
+			height: 100%;
+		}
+			.TextBlock5 h3{
+				font-family: system-ui;
+				font-weight: bold;
+				font-size: 5vh;
+				font-style: normal;
+			}
+			.TextBlock5 p{
+				margin-top: 2vh;
+				width: 80%;
+				word-break: break-word;
+				text-align: center;
+			}
+		.developerBlock5{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			width: 60%;
+			height: 100%;
+			background-color: var(--corD);
+		}
+			.perfilBlock5{
+				height: 27vh;
+				border-radius: 50vw;
+			}
+			.lbBlock5{
+				font-size: 4vh;
+				color: var(--corB);
+				font-weight: bold;
+				font-family: monospace;
+			}
+			.linksBlock5{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				width: 63%;
+			}
+				.linkRedrect{
+					text-decoration: none;
+					background-color: var(--corC);
+					color: var(--corE);
+					padding: 1vh;
+					border-radius: 0.1vw;
+					font-size: 2vh;
+					font-style: italic;
+					font-weight: bold;
+					font-family: monospace;
+				}
+					.linkRedrect:hover{
+						cursor: pointer;
+						border: 3px solid var(--corA);
+						font-size: 2.5vh;
+					}
+					.linkRedrect:active{
+						cursor: grabbing;
+						font-size: 1.5vh;
+						filter: grayscale(50%);
+					}
 @media only screen and (max-width: 400px){
 	.MenuBar{
 		background: red;
