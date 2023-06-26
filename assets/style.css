@@ -5,7 +5,6 @@ body{
 	overflow-y: scroll;
 }
 .Block-top{
-	display: flex;
 	width: 100vw;
 	padding: 1vh 0vw;
 	background-color: var(--none);
@@ -16,14 +15,12 @@ body{
 	backdrop-filter: blur(2px);
 }
 	.certerTop{
-		display: flex;
 		width: 90vw;
 		justify-content: space-between;
 		align-items: center;
 	}
 		.FastAcess{
 			width: 68vw;
-			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
 			align-items: center;
@@ -36,7 +33,6 @@ body{
 				font-weight: normal;
 			}
 		.logoTop{
-			display: flex;
 			height: 6vh;
 			width: 6vh;
 			background-image: url('shortlogo.png');
@@ -59,7 +55,6 @@ body{
 				font-size: 3vh;
 			}
 .Block-One{
-	display: flex;
 	height: 130vh;
 	width: 100vw;
 	flex-direction: column;
@@ -71,7 +66,6 @@ body{
 	background-blend-mode: multiply;
 }
 	.BigBlockOne{
-		display: flex;
 		height: 90vh;
 		width: 100vw;
 		flex-direction: row;
@@ -81,7 +75,6 @@ body{
 		backdrop-filter: blur(3px);
 	}
 		.textOne{
-			display: flex;
 			width: 23vw;
 			height: 40vh;
 			flex-direction: column;
@@ -109,7 +102,6 @@ body{
 					border-radius: 0.2vw;
 				}
 		.text2One{
-			display: flex;
 			width: 40vw;
 			height: 50vh;
 			background-size: contain;
@@ -118,7 +110,6 @@ body{
 			background-image: url('logo.png');
 		}
 	.shortBlockOne{
-		display: flex;
 		width: 100vw;
 		height: 40vh;
 		align-items: self-start;
@@ -127,7 +118,6 @@ body{
 		backdrop-filter: blur(3px);
 	}
 		.cardTextOne{
-			display: flex;
 			height: 48vh;
 			align-items: flex-start;
 			justify-content: space-around;
@@ -168,18 +158,18 @@ body{
 		font-size: 5vh;
 		position: absolute;
 		margin: 3vh 0vw 0vh 47vw;
+		background-color: var(--corB);
+		border-radius: 50px;
 	}
 		.exitLeftMenu:hover{
 			cursor: pointer;
 			border: 1px solid black;
-			border-radius: 50px;
 		}
 		.exitLeftMenu:active{
 			cursor: grabbing;
 			font-size: 4vh;
 		}
 .Block-Two{
-	display: flex;
 	flex-direction: row;
 	width: 80vw;
 	padding: 9vh 10vw;
@@ -188,7 +178,6 @@ body{
 	justify-content: center;
 }
 	.meioBlock2{
-		display: flex;
 		width: 55%;
 		flex-direction: column;
 		align-items: center;
@@ -196,7 +185,6 @@ body{
 		height: 100%;
 	}
 		.textBlock2{
-			display: flex;
 			height: 28vh;
 			flex-direction: row;
 			align-items: center;
@@ -221,12 +209,10 @@ body{
 				font-size: 2vh;
 			}
 		.imgReprBlock2{
-			display: flex;
 			height: 52vh;
 			width: 100%;
 		}
 		.blockIconBlock2{
-			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
@@ -241,7 +227,6 @@ body{
 				color: var(--corA);
 			}
 .Block-Tre{
-	display: flex;
 	background-image: url('fundoSet1.jpg');
 	padding: 15vh 0vw;
 	flex-direction: column;
@@ -252,13 +237,11 @@ body{
 	background-size: cover;
 }
 	.cardMost-tre{
-		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		width: 70vw;
 	}
 		.cardTre{
-			display: flex;
 			background-color: rgb(242 184 133 / 90%);
 			padding: 2vh;
 			width: 18vw;
@@ -284,14 +267,12 @@ body{
 				font-style: italic;
 			}
 				.cardTextTre label{
-					display: flex;
 					font-weight: bold;
 					font-size: 3vh;
 					font-family: system-ui;
 					font-style: normal;
 				}
 .textBlock4{
-	display: flex;
 	height: 100%;
 	flex-direction: column;
 	align-items: center;
@@ -327,7 +308,6 @@ body{
 		width: 100%;
 	}
 .Block-Five{
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -337,7 +317,6 @@ body{
 	background-color: var(--corA);
 }
 	.centerBlock5{
-		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
@@ -345,7 +324,6 @@ body{
 		height: 56vh;
 	}
 		.TextBlock5{
-			display: flex;
 			flex-direction: column;
 			align-items: self-start;
 			justify-content: start;
@@ -369,7 +347,6 @@ body{
 				text-align: center;
 			}
 		.developerBlock5{
-			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: space-around;
@@ -388,7 +365,6 @@ body{
 				font-family: monospace;
 			}
 			.linksBlock5{
-				display: flex;
 				flex-direction: row;
 				align-items: center;
 				justify-content: space-between;
@@ -415,6 +391,88 @@ body{
 						font-size: 1.5vh;
 						filter: grayscale(50%);
 					}
+.BlockSex{
+	flex-direction: column;
+	background-color: var(--corC);
+	height: 70vh;
+	padding: 10vh 0vw;
+	align-items: center;
+	justify-content: center;
+}
+	.title6{
+		color: var(--corA);
+		margin-top: -6vh;
+		font-family: monospace;
+		font-weight: bold;
+		font-size: 6vh;
+	}
+	.subtitle6{
+		color: var(--corB);
+		margin-bottom: 2vh;
+		font-size: 2vh;
+		font-style: italic;
+	}
+	.gridBlock5{
+		flex-wrap: wrap;
+		height: 100%;
+		width: 80vw;
+		justify-content: center;
+	}
+		.cardGridBlock5{
+			height: 31vh;
+			width: 22vw;
+			margin-right: 3vw;
+			border-radius: 0.2vw;
+			padding: 1vw;
+			margin-bottom: 2vh;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			font-size: 2vh;
+			font-family: monospace;
+			font-style: italic;
+			background-color: var(--corC);
+			color: var(--corD);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-blend-mode: multiply;
+		}
+			.cardGridBlock5:hover{
+				cursor: pointer;
+			}
+			.cardGridBlock5 h2, .cardGridBlock5 p{
+				display: none;
+			}
+			.cardGridBlock5:hover h2, .cardGridBlock5:hover p{
+				display: flex;
+			}
+			.type2CardBlock6{
+				background-color: var(--corB);
+				color: var(--corE);
+			}
+			.type3CardBlock6{
+				background-color: var(--corC);
+				color: var(--corD);
+				border: 3px solid var(--corD);
+			}
+			.type4CardBlock6{
+				background-color: var(--corD);
+				color: var(--corB);
+				background-blend-mode: overlay;
+			}
+			.titleBlc5{
+				font-size: 3.5vh;
+				font-weight: bold;
+			}
+			.iconBlck5{
+				font-size: 10vh;
+				align-self: center;
+				background-color: var(--corC);
+				padding: 1vh;
+				border-radius: 0.55vw;
+				margin-top: 6vh;
+			}
 @media only screen and (max-width: 400px){
 	.MenuBar{
 		background: red;

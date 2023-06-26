@@ -30,6 +30,16 @@ function ocultar(obj, es){
 	};
 };
 
+//open menu left expesific
+function OpenModal(funMost, div, fun){
+	ocultar(div, funMost);
+	if(fun==0){
+		//
+	}else{
+		//
+	}
+}
+
 //redirecionar pagina
 function redirect(page) {
     window.location.href = page;

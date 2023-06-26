@@ -31,7 +31,6 @@
 		display: none;
 	}
 body{
-	display: flex;
 	flex-direction: column;
 }
 
@@ -70,3 +69,7 @@ body{
 		height: 31vh;
 		width: 31vh;
 	}
+
+.flexDisplay{
+	display: flex;
+}

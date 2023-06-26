@@ -10,17 +10,27 @@
 	    <link rel="shortcut icon" href="assets/shortLogo.png">
 		<title>MangaWorld</title>
 	</head>
-	<body class="BackgrounPatter0">
+	<body class="BackgrounPatter0 flexDisplay">
 		<button class="irTop" id="irTopBtn" style="background-image: url('assets/imgIrTopPrinc.png')"></button>
 		<!--Menu lateral-->
 		<div class="LeftMenu">
 			<i class="exitLeftMenu fa-solid fa-circle-xmark" onclick="ocultar('.LeftMenu', 0)"></i>
+			<div class="escCadorLogin flexDisplay">
+				<div class="btnsManagerLtMenu flexDisplay">
+					<button class="btnLtMenu"><i class="fa-solid fa-user-check"></i></button>
+					<button class="btnLtMenu"><i class="fa-solid fa-user-plus"></i></button>
+				</div>
+				<div class="FormsLtMenu flexDisplay">
+					<form class="FormLtMenu flexDisplay"></form>
+					<form class="FormLtMenu flexDisplay"></form>
+				</div>
+			</div>
 		</div>
 		<!--tolls-->
-		<div class="Block-top">
-			<div class="certerTop">
+		<div class="Block-top flexDisplay">
+			<div class="certerTop flexDisplay">
 				<div class="logoTop"></div>
-				<div class="FastAcess">
+				<div class="FastAcess flexDisplay">
 					<button class="topicOne bntScroll">O que é este Site</button>
 					<button class="topicOne bntScroll">Diferencial</button>
 					<button class="topicOne bntScroll">Entrar</button>
@@ -31,19 +41,19 @@
 			</div>
 		</div>
 		<!--"sumário"-->
-		<div class="Block-One">
-			<div class="BigBlockOne">
-				<div class="textOne">
+		<div class="Block-One flexDisplay">
+			<div class="BigBlockOne flexDisplay">
+				<div class="textOne flexDisplay">
 					<button class="topicOne bntScroll">O que é este Site</button>
 					<button class="topicOne bntScroll">Diferencial</button>
 					<button class="topicOne bntScroll">Entrar</button>
 					<button class="topicOne bntScroll">Desenvolvedor</button>
 					<button class="topicOne bntScroll">Contato</button>
 				</div>
-				<div class="text2One"></div>
+				<div class="text2One flexDisplay"></div>
 			</div>
-			<div class="shortBlockOne">
-				<div class="cardTextOne">
+			<div class="shortBlockOne flexDisplay">
+				<div class="cardTextOne flexDisplay">
 					<i class="iconShort0 fa-solid fa-book-open"></i>
 					<p class="palagrafyOne">Entre em um <strong>Mundo</strong> de aventuras, mistérios e emoções. Descubra o poder neste site de <strong>Mangas, Webtoons e Hqs</strong></p>
 				</div>
@@ -62,22 +72,22 @@
 			</div>
 		</div>
 		<!--O que é este Site-->
-		<div class="Block-Two">
-			<div class="meioBlock2">
-				<div class="textBlock2">
+		<div class="Block-Two flexDisplay">
+			<div class="meioBlock2 flexDisplay">
+				<div class="textBlock2 flexDisplay">
 					<h2>O que é este Site?</h2>
 					<p>Nosso site é um destino online dedicado aos leitura de <strong>Mangas, Webtoons e Hqs</strong>. Aqui, você os encontrará publicados pelos os usuários do site.</p>
 				</div>
 				<img src="assets/ScannBook.png" class="imgReprBlock2">
 			</div>
-			<div class="meioBlock2 typeMain2-Block2">
+			<div class="meioBlock2 typeMain2-Block2 flexDisplay">
 				<img src="assets/Capailustrativa.jpg" class="imgReprBlock2">
-				<div class="textBlock2">
-					<div class="blockIconBlock2">
+				<div class="textBlock2 flexDisplay">
+					<div class="blockIconBlock2 flexDisplay">
 						<i class="fa-solid fa-globe"></i>
 						<h4>Web</h4>
 					</div>
-					<div class="blockIconBlock2 cor2-Block2">
+					<div class="blockIconBlock2 cor2-Block2 flexDisplay">
 						<i class="fa-solid fa-book-open-reader"></i>
 						<h4>Hqs</h4>
 					</div>
@@ -85,9 +95,9 @@
 			</div>
 		</div>
 		<!--Diferencial-->
-		<div class="Block-Tre">
-			<div class="cardMost-tre">
-			  <div class="cardTre">
+		<div class="Block-Tre flexDisplay">
+			<div class="cardMost-tre flexDisplay">
+			  <div class="cardTre flexDisplay">
 			    <i class="fa-solid fa-star"></i>
 			    <p class="cardTextTre"><label>Diferenciais</label>Aqui mostraremos nosso diferencial exclusivo</p>
 			  </div>
@@ -114,38 +124,38 @@
 			</div>
 		</div>
 		<!--Entrar-->
-		<div class="Block-Two">
-			<div class="meioBlock2">
+		<div class="Block-Two flexDisplay">
+			<div class="meioBlock2 flexDisplay">
 				<div class="textBlock2">
 					<h2>Entre e Participe!</h2>
 					<p>Faça sua conta e tenha a experiencia completa do site, intereja com a comunidade, publique suas obras, ou scans!!!</p>
 				</div>
 				<img src="assets/Amém.jpg" class="imgReprBlock2">
 			</div>
-			<div class="meioBlock2 typeMain2-Block2">
-				<div class="textBlock4">
-					<div class="blockIconBlock2 cor2-Block4">
+			<div class="meioBlock2 typeMain2-Block2 flexDisplay">
+				<div class="textBlock4 flexDisplay">
+					<div class="blockIconBlock2 cor2-Block4 flexDisplay">
 						<i class="fa-solid fa-person-walking-arrow-right"></i>
-						<button class="BtnEntrarBlock4">Entrar</button>
+						<button class="BtnEntrarBlock4" onclick="OpenModal(1, '.LeftMenu', 0)">Entrar</button>
 					</div>
-					<div class="blockIconBlock2 cor2-Block2 cor2-Block4">
+					<div class="blockIconBlock2 cor2-Block2 cor2-Block4 flexDisplay">
 						<i class="fa-solid fa-user-plus"></i>
-						<button class="BtnEntrarBlock4 cssBlock4">Se Cadastrar</button>
+						<button class="BtnEntrarBlock4 cssBlock4" onclick="OpenModal(1, '.LeftMenu', 1)">Se Cadastrar</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!--Desenvolvedor-->
-		<div class="Block-Five">
-			<div class="centerBlock5">
-				<div class="TextBlock5">
+		<div class="Block-Five flexDisplay">
+			<div class="centerBlock5 flexDisplay">
+				<div class="TextBlock5 flexDisplay">
 					<h3>Desenvolverdor e Designer</h3>
 					<p>ajhfaoiuyhyewhfvouyadsuyfvgawuebgfvabwugyedcabvhjbfdashhewfhobgsf</p>
 				</div>
-				<div class="developerBlock5">
+				<div class="developerBlock5 flexDisplay">
 					<img src="https://avatars.githubusercontent.com/u/91744500?v=4" class="perfilBlock5">
 					<label class="lbBlock5">Murilo Gimenez Couto Mendes</label>
-					<div class="linksBlock5">
+					<div class="linksBlock5 flexDisplay">
 						<a href="https://github.com/murilouwu" class="linkRedrect">Projetos no Github</a>
 						<a href="#" class="linkRedrect">Portifolio DeviantArt</a>
 					</div>
@@ -153,31 +163,29 @@
 			</div>
 		</div>
 		<!--Contato-->
-		<div class="block-sex">
-			<div class="gridBlock5">
-				<div class="cardGridBlock5">
-					<h2 class="titleBlc5">Title1</h2>
-					<p class="palagrafyBlc5">Texto ....</p>
+		<div class="BlockSex flexDisplay">
+			<h1 class="title6">Contato</h1>
+			<h6 class="subtitle6">Aproxime o mouse dos cards</h6>
+			<div class="gridBlock5 flexDisplay">
+				<div class="cardGridBlock5 flexDisplay" style="background-image: url('https://yt3.googleusercontent.com/lsgdll7BZfDWNyWmSvcz9VZghG8nAR3K1DGeW_pRjGgojaKBBUev0UjB-XgPaHzT1TmUkgGJty0=s176-c-k-c0x00ffffff-no-rj');">
+					<h2 class="titleBlc5">DinossauroComGonorreia</h2>
+					<p class="palagrafyBlc5">Meu Canal do Youtube</p>
+					<i class="iconBlck5 fa-brands fa-youtube" onclick="redirect('https://www.youtube.com/channel/UC5j326FDOeG70i3KixHsTSw')"></i>
 				</div>
-				<div class="cardGridBlock5">
-					<h2 class="titleBlc5">Title2</h2>
-					<p class="palagrafyBlc5">Texto ....</p>
+				<div class="cardGridBlock5 type4CardBlock6" style="background-image: url('https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/275410217_360254972646150_4390390322356645339_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=dxPUMRHHvI4AX8Zp2bd&_nc_ht=scontent-gru2-2.xx&oh=00_AfC63Bhmqm5bENQduPh6YZNRolKOz-akxYmzfW06EOtWdw&oe=649F822E');">
+					<h2 class="titleBlc5">Murilo Gimenez</h2>
+					<p class="palagrafyBlc5">Meu Facebook</p>
+					<i class="iconBlck5 fa-brands fa-facebook" onclick="redirect('https://www.facebook.com/murilo.gimenez.7543/')"></i>
 				</div>
-				<div class="cardGridBlock5">
-					<h2 class="titleBlc5">Title3</h2>
-					<p class="palagrafyBlc5">Texto ....</p>
+				<div class="cardGridBlock5 type3CardBlock6" style="background-image: url('https://pbs.twimg.com/profile_images/1340344627019321353/488wE2fh_400x400.jpg');">
+					<h2 class="titleBlc5">V</h2>
+					<p class="palagrafyBlc5">Meu Twitter</p>
+					<i class="iconBlck5 fa-brands fa-twitter" onclick="redirect('https://twitter.com/v43410730')"></i>
 				</div>
-				<div class="cardGridBlock5">
-					<h2 class="titleBlc5">Title4</h2>
-					<p class="palagrafyBlc5">Texto ....</p>
-				</div>
-				<div class="cardGridBlock5">
-					<h2 class="titleBlc5">Title5</h2>
-					<p class="palagrafyBlc5">Texto ....</p>
-				</div>
-				<div class="cardGridBlock5">
-					<h2 class="titleBlc5">Title6</h2>
-					<p class="palagrafyBlc5">Texto ....</p>
+				<div class="cardGridBlock5 type2CardBlock6" style="background-image: url('assets/Amém.jpg');">
+					<h2 class="titleBlc5 ">MuriloDaSaladaDeDesenho</h2>
+					<p class="palagrafyBlc5">Meu Instragram</p>
+					<i class="iconBlck5 fa-brands fa-instagram" onclick="redirect('https://twitter.com/v43410730')"></i>
 				</div>
 			</div>
 		</div>
@@ -189,7 +197,7 @@
 			    window.scrollTo({ top: 0, behavior: 'smooth' });
 			});
 
-			let scrollsTops = [1000, 1800, 2800, 1500, 1500, 1000, 1800, 2800, 1500, 1500];
+			let scrollsTops = [1000, 1750, 2500, 3300, 3900, 1000, 1750, 2500, 3300, 3900];
 
 			const buttons = document.querySelectorAll('.bntScroll');
 
