@@ -169,6 +169,53 @@ body{
 			cursor: grabbing;
 			font-size: 4vh;
 		}
+	.escCadorLogin{
+		flex-direction: column;
+		width: 30vw;
+		margin-top: 5vh;
+	}
+		.btnsManagerLtMenu{
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+			.btnLtMenu{
+				border: none;
+				width: 11vw;
+				padding: 1vh;
+				color: var(--corC);
+				background-color: var(--corB);
+				border-radius: 0.1vw;
+				font-size: 5vh;
+			}
+				.btnLtMenu:hover{
+					cursor: pointer;
+					width: 13vw;
+					background-color: var(--corD);
+				}
+				.btnLtMenu:active{
+					cursor: grabbing;
+					width: 9vw;
+					font-size: 4vh;
+					background-color: var(--corB);
+				}
+			.FormsLtMenu{
+				flex-direction: column;
+				margin-top: 2vh;
+				height: 70vh;
+				background-color: var(--corC);
+				border: 2px solid var(--corD);
+				border-radius: 0.2vw;
+				align-items: center;
+				justify-content: center;
+			}
+				.FormLtMenu{
+					display: none;
+					width: 100%;
+					height: 100%;
+					align-items: center;
+					justify-content: center;
+				}
 .Block-Two{
 	flex-direction: row;
 	width: 80vw;
@@ -265,6 +312,7 @@ body{
 				font-family: monospace;
 				color: var(--corB);
 				font-style: italic;
+				flex-direction: column;
 			}
 				.cardTextTre label{
 					font-weight: bold;

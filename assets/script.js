@@ -32,15 +32,20 @@ function ocultar(obj, es){
 
 //open menu left expesific
 function OpenModal(funMost, div, fun){
-	ocultar(div, funMost);
+	ocultar(div[0], funMost);
 	if(fun==0){
-		//
+		
 	}else{
-		//
+		
 	}
 }
 
 //redirecionar pagina
 function redirect(page) {
     window.location.href = page;
+}
+
+function Scroll0Display(item) {
+	let fun = window.scrollY === 0 ? 0 : 1;
+	ocultar(item, fun);
 }
