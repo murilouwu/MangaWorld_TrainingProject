@@ -1,15 +1,44 @@
 <!--
-function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-
-    // Preencher automaticamente os campos do formulário
-    document.getElementById('nome').value = profile.getName();
-    document.getElementById('email').value = profile.getEmail();
-}
--->
-<!--
     ID:
     986510640429-40dehe8e9gg1eddmegab8pcouosskh0m.apps.googleusercontent.com
     chave:
     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
 -->
+
+
+<form class="FormLtMenu" method="post" enctype="multipart/form-data" id="SignInForm">
+    <label> Cadastrar: </label>
+    <div id="google-signin-button"></div>
+    <div>
+        <input type="text" name="NomeUser" id="NomeUser">
+        <input type="email" name="EmailUser" id="EmailUser">
+    </div>
+</form>
+
+<script>
+    function renderButtons(){
+        gapi.signin2.render('google-signin-button', {
+            'scope': 'profile email',
+            'width': 240,
+            'height': 50,
+            'longtitle': true,
+            'theme': 'dark',
+            'onsuccess': onSignIn
+        });
+        gapi.signin2.render('google-signin-button-L', {
+            'scope': 'profile email',
+            'width': 240,
+            'height': 50,
+            'longtitle': true,
+            'theme': 'dark',
+            'onsuccess': onSignInLogin
+        });
+    }
+    
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+
+        //document.getElementById('nome').value = profile.getName();
+        //document.getElementById('email').value = profile.getEmail();
+    }
+</script>

@@ -31,13 +31,10 @@ function ocultar(obj, es){
 };
 
 //open menu left expesific
-function OpenModal(funMost, div, fun){
+function OpenModal(funMost, div, chose){
 	ocultar(div[0], funMost);
-	if(fun==0){
-		
-	}else{
-		
-	}
+	let btn = document.querySelectorAll(div[1]);
+	adamCendler(btn[chose]);
 }
 
 //redirecionar pagina
@@ -48,4 +45,17 @@ function redirect(page) {
 function Scroll0Display(item) {
 	let fun = window.scrollY === 0 ? 0 : 1;
 	ocultar(item, fun);
+}
+
+function oculForm(divs, index){
+	fun = [
+		index==0? 1:0,
+		index==1? 1:0
+	];
+	ocultar(divs[0], fun[0]);
+	ocultar(divs[1], fun[1]);
+}
+
+function adamCendler(btn){
+	btn.click();
 }
