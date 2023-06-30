@@ -59,3 +59,41 @@ function oculForm(divs, index){
 function adamCendler(btn){
 	btn.click();
 }
+
+function SignUp(response) {
+	const data = jwt_decode(response.credential);
+	
+	$.ajax({
+		url: 'login.php',
+		method: 'POST',
+		data: {
+			NomeUser: data.name,
+			EmailUser: data.email
+		},
+		success: function(response) {
+			console.log('Valores enviados com sucesso!');
+		},
+		error: function(xhr, status, error) {
+			console.error('Erro ao enviar os valores: ' + error);
+		}
+	});
+}
+
+function Login(response) {
+	const data = jwt_decode(response.credential);
+	
+	$.ajax({
+		url: 'login.php',
+		method: 'POST',
+		data: {
+			NomeUser: data.name,
+			EmailUser: data.email
+		},
+		success: function(response) {
+			console.log('Valores enviados com sucesso!');
+		},
+		error: function(xhr, status, error) {
+			console.error('Erro ao enviar os valores: ' + error);
+		}
+	});
+}

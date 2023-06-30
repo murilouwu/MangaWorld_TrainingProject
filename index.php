@@ -5,22 +5,16 @@
 	HeaderEcho(
 		'MangaWorld', 
 		[
-			['assets/css/style.css'], 
-			[
-				'assets/script.js',
-				'https://kit.fontawesome.com/39cab4bf95.js',
-				'https://code.jquery.com/jquery-3.2.1.slim.js', 
-				'https://accounts.google.com/gsi/client',
-				'https://apis.google.com/js/platform.js?onload=renderButtons'
-			],
-			'assets/imgs/shortLogo.png',
-		],
-		[
-			[1,1,'crossorigin="anonymous"'],
-			[1,2,'integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"'],
-			[1,3,'async defer'],
-			[1,4,'async defer']
-		]
+			[0, 'charset="utf-8"'],
+			[0, 'name="viewport" content="width=device-width, initial-scale=1"'],
+			[1, 'assets/css/style.css'],
+			[2, 'https://accounts.google.com/gsi/client', 'async defer'],
+			[2, 'https://unpkg.com/jwt-decode/build/jwt-decode.js', 'crossorigin="anonymous" async defer'],
+			[2, 'assets/script.js'],
+			[2, 'https://kit.fontawesome.com/39cab4bf95.js', 'crossorigin="anonymous"'],
+			[2, 'https://code.jquery.com/jquery-3.6.0.min.js', 'crossorigin="anonymous"']
+		], 
+		'assets/imgs/shortLogo.png'
 	);
 ?>
 	<body class="BackgrounPatter0 flexDisplay">
@@ -36,21 +30,11 @@
 				<div class="FormsLtMenu flexDisplay">
 					<form class="FormLtMenu" method="post" id="LoginForm">
 						<label> Entrar: </label>
-						<div id="google-signin-button-L"></div>
-						<div class="ocultar">
-							<input type="text" name="NomeUser" id="NomeUserLog">
-							<input type="email" name="EmailUser" id="EmailUserLog">
-							<input type="submit" name="EnvCad" id="EnvLog">
-						</div>
+						<div id="buttonLog"></div>
 					</form>
 					<form class="FormLtMenu" method="post" enctype="multipart/form-data" id="SignInForm">
 						<label> Cadastrar: </label>
-						<div id="google-signin-button"></div>
-						<div>
-							<input type="text" name="NomeUser" id="NomeUserCad">
-							<input type="email" name="EmailUser" id="EmailUserCad">
-							<input type="submit" name="EnvCad" id="EnvCad">
-						</div>
+						<div id="buttonCad"></div>
 					</form>
 				</div>
 			</div>
@@ -240,47 +224,76 @@
 			    });
 			});
 			
-			function renderButtons(){
-				gapi.signin2.render('google-signin-button', {
-					'scope': 'profile email',
-					'width': 240,
-					'height': 50,
-					'longtitle': true,
-					'theme': 'dark',
-					'onsuccess': onSignIn
+			window.onload = function () {
+				google.accounts.id.initialize({
+					client_id: "986510640429-ojm0avl7epimmsmekq2p06dq457qbn7n.apps.googleusercontent.com"
 				});
-				gapi.signin2.render('google-signin-button-L', {
-					'scope': 'profile email',
-					'width': 240,
-					'height': 50,
-					'longtitle': true,
-					'theme': 'dark',
-					'onsuccess': onSignInLogin
+				google.accounts.id.renderButton(
+					document.getElementById("buttonLog"),
+					{ 
+						theme: "filled_black", 
+						size: "large",
+						type: "standard",
+						shape: "pill",
+						text: " {button.$text}",
+						logo_alignment: "left"
+					},
+					Login
+				);
+				google.accounts.id.renderButton(
+					document.getElementById("buttonCad"),
+					{ 
+						theme: "filled_black", 
+						size: "large",
+						type: "standard",
+						shape: "pill",
+						text: " {button.$text}",
+						logo_alignment: "left"
+					},
+					SignUp
+				);
+				google.accounts.id.prompt();
+			}
+
+			function SignUp(response) {
+				const data = jwt_decode(response.credential);
+				
+				$.ajax({
+					url: 'login.php',
+					method: 'POST',
+					data: {
+						NomeUser: data.name,
+						EmailUser: data.email
+					},
+					success: function(response) {
+						console.log('Valores enviados com sucesso!');
+					},
+					error: function(xhr, status, error) {
+						console.error('Erro ao enviar os valores: ' + error);
+					}
 				});
 			}
 			
-			function onSignIn(googleUser) {
-				var profile = googleUser.getBasicProfile();
-
-				document.getElementById('NomeUserCad').value = profile.getName();
-        		document.getElementById('EmailUserCad').value = profile.getEmail();
-
-				let btn = document.getElementById('EnvCad');
-				adamCendler(btn);
-			}
-			
-			function onSignInLogin(googleUser) {
-				var profile = googleUser.getBasicProfile();
-
-				document.getElementById('NomeUserLog').value = profile.getName();
-        		document.getElementById('EmailUserLog').value = profile.getEmail();
-
-				let btn = document.getElementById('EnvLog');
-				adamCendler(btn);
+			function Login(response) {
+				const data = jwt_decode(response.credential);
+				
+				$.ajax({
+					url: 'login.php',
+					method: 'POST',
+					data: {
+						NomeUser: data.name,
+						EmailUser: data.email
+					},
+					success: function(response) {
+						console.log('Valores enviados com sucesso!');
+					},
+					error: function(xhr, status, error) {
+						console.error('Erro ao enviar os valores: ' + error);
+					}
+				});
 			}
 		</script>
 	</body>
-
 <?php 
     footEcho();
 ?>
