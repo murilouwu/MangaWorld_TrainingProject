@@ -52,4 +52,8 @@
 		';
 		echo($res);
 	}
+	function mensage($txt){
+	    echo '<script>alert("'.$txt.'");</script>';
+	}
+
 ?>
