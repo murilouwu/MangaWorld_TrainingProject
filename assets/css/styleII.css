@@ -1,0 +1,77 @@
+@import 'preset.css';
+
+body{
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.Block-top{
+	width: 100vw;
+	padding: 1vh 0vw;
+	background-color: var(--none);
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 2;
+	backdrop-filter: blur(2px);
+}
+	.certerTop{
+		width: 90vw;
+		justify-content: space-between;
+		align-items: center;
+	}
+		.FastAcess{
+			width: 68vw;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		}
+			.FastAcess .topicOne{
+				width: 13vw;
+				background-color: rgba(2 64 89 / 70%);
+				border-radius: 0.5vw;
+				font-size: 2vh;
+				font-weight: normal;
+			}
+                .topicOne{
+                    background-color: var(--none);
+                    border: none;
+                    color: var(--corD);
+                    font-family: monospace;
+                    font-weight: bold;
+                    font-size: 2.5vh;
+                    padding: 1vh 0vw;
+                    text-align: center;
+                }
+                    .topicOne:hover{
+                        cursor: pointer;
+                        border-bottom: 3px solid var(--corC);
+                    }
+                    .topicOne:active{
+                        cursor: grabbing;
+                        background-color: var(--corC);
+                        padding: 1vh;
+                        border-radius: 0.2vw;
+                    }
+		.logoTop{
+			height: 6vh;
+			width: 6vh;
+			background-image: url('../imgs/shortLogo.png');
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.MenuBar{
+			background: var(--none);
+			border: none;
+			color: var(--corE);
+			font-size: 4vh;
+		}
+			.MenuBar:hover{
+				cursor: pointer;
+				font-size: 5vh;
+			}
+			.MenuBar:active{
+				cursor: grabbing;
+				font-size: 3vh;
+			}

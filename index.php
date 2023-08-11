@@ -170,7 +170,7 @@
 					<label class="lbBlock5">Murilo Gimenez Couto Mendes</label>
 					<div class="linksBlock5 flexDisplay">
 						<a href="https://github.com/murilouwu" class="linkRedrect">Projetos no Github</a>
-						<a href="#" class="linkRedrect">Portifolio DeviantArt</a>
+						<a href="https://www.deviantart.com/murilogimenez" class="linkRedrect">Portifolio DeviantArt</a>
 					</div>
 				</div>
 			</div>
